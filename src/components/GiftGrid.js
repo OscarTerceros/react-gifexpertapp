@@ -1,7 +1,13 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 export const GiftGrid = ( { category } ) => {
   
+  const [images, setImages] = useState([]);
+
+  useEffect( () => {
+    getGifts();
+  }, [])
+
   const getGifts = async() => {
 
     const url = 'https://api.giphy.com/v1/gifs/search?q=hunter+x+hunter&limit=5&api_key=ovLQe0MSYuhnYn9tGgoaGtlTHlBuKl6o';
@@ -18,14 +24,20 @@ export const GiftGrid = ( { category } ) => {
       }
     })
     
-    console.log( gifs );
+    setImages( gifs );
+
   }
   
-  getGifts();
-
   return (
     <div>
       <h3> { category } </h3>
+      <ol>
+        { images.map( ({ id, title }) => 
+          (
+            <li key = { id }> { title } </li>
+          ))
+        }
+      </ol>
     </div>
   )
 }
