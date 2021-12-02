@@ -12,7 +12,7 @@ export const AddCategory = ( { setCategories } ) => {
     e.preventDefault(); //para que no realice el evento por defecto del formulario
     
     if ( inputValue.trim().length > 2  ) {
-      setCategories( categories => [ ...categories, inputValue ] );
+      setCategories( categories => [ inputValue, ...categories ] );
       setInputValue( '' );
     }
   }
