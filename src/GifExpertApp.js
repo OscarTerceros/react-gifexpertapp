@@ -5,7 +5,7 @@ import { GiftGrid } from "./components/GiftGrid";
 
 export const GifExpertApp = () => {
   
-  const [categories, setCategories] = useState( [''] );
+  const [categories, setCategories] = useState( ['Assassins Creed'] );
 
   return (
     <>

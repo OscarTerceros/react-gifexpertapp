@@ -16,7 +16,7 @@ export const GiftGrid = ( { category } ) => {
       <div className = "card-grid">
         
         { 
-          images .map( ( img ) => 
+          images.map( ( img ) => 
             (
               <GifGridItem 
                 key = { img.id }
