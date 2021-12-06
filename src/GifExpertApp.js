@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import { AddCategory } from "./components/AddCategory";
-import { GiftGrid } from "./components/GiftGrid";
+import { GifGrid } from "./components/GifGrid";
 
 export const GifExpertApp = () => {
   
@@ -17,7 +17,7 @@ export const GifExpertApp = () => {
       <ol>
        {
          categories.map( category => (
-          <GiftGrid 
+          <GifGrid 
             key = { category }
             category = { category }
           />
